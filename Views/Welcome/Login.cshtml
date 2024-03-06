@@ -1,0 +1,120 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ByteSwap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/WelcomePage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/LoginPage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="D:\ITELEC1\ByteSwapFinalProject\Views\Welcome\Login.cshtml" asp-append-version="true" />
+
+
+</head>
+<body>
+
+     @* <div id="content-holder">
+        <div class="container row small-window" id="login">
+            <div class="col-md-6 my-3 d-flex flex-column align-items-center justify-content-center">
+                <img src="~/assets/2_Transparent_BlackTxt.png" height="100dp" />
+                <div class="text-center">Connect, Click, Upgrade!</div>
+            </div>
+
+            <div class="col-md-6 my-3 d-flex flex-column align-items-center align-items-md-end justify-content-center">
+                <form asp-controller="Welcome" asp-action="Login" method="post" class="welcome-forms d-flex flex-column align-items-center justify-content-end">
+                    <div class="text-start w-100 h4">Log In</div>
+                    <ul class="w-100">
+                        <li class="my-3 h6">
+                            <div>Username:</div>
+                            <input name="Username" class="w-100 mt-1 form-control" type="text" required/>
+                        </li>
+                        <li class="my-3 h6">
+                            <div>Password:</div>
+                            <input name="Password" class="w-100 mt-1 form-control" type="password" required/>
+                        </li>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                        <div class="d-flex w-100 mt-4 justify-content-between">
+                            <a class="btn btn-secondary" asp-controller="Welcome" asp-action="Index">Return</a>
+                            <button class="btn btn-secondary bg-clr-primary" type="submit">Login</button>
+                        </div>
+                    </ul>
+                </form>
+
+            </div>
+        </div>
+    </div>  *@ 
+
+
+	<div class="container" id="container">
+		 
+		<div class="form-container sign-in-container" id="login">
+			<form asp-controller="Welcome" asp-action="Login" method="post">
+				<h1 class="title_signin">Sign in</h1>
+				
+				<input name="Username" type="text" placeholder="Username" value="laurence_admin"/>
+				<input name="Password" type="Password" placeholder="Password" value="password123"/>
+                <div class="signin">
+                    <div asp-validation-summary="All" class="text-danger"></div>
+
+                    <button type="submit" class="btn_signin">Sign In</button>
+                </div>
+			</form>
+		</div>
+
+
+        <div class="form-container sign-up-container ">
+            <form asp-controller="Welcome" asp-action="Signup" method="post">
+
+                <input name="Firstname" type="text" placeholder="Firstname" required />
+                <input name="Lastname" type="text" placeholder="Lastname" required />
+                <input name="Email" type="email" placeholder="Email" required />
+                <input name="ContactNumber" type="text" placeholder="Contact Number" required />
+                <input name="Username" type="text" placeholder="Username" required />
+                <input name="Password" type="password" placeholder="Password" required />
+                <input name="ConfirmPassword" type="password" placeholder="Confirm Password" required />
+
+
+                <button type="submit" class="btn_signup">Sign Up</button>
+            </form>
+
+        </div>
+
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+                    <h1 class="title_signup">
+                        Sign Up!
+                    </h1>
+                    <p>
+                        Already have an account? Login here
+                    </p>
+					<button class="ghost" id="signIn">Sign In</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+                    <img src="~/assets/2_Transparent_WhiteTxt.png" height="250dp" />
+                    <p>
+                        Don't have an account? Sign up here
+                    </p>
+					<button class="ghost" id="signUp">Sign Up</button>
+				</div>
+			</div>
+		</div>
+	</div>
+ 
+	
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="D:\ITELEC1\ByteSwapFinalProject\Views\Welcome\Login\Login.js" asp-append-version="true"></script>
+
+    <script src="~/js/WelcomePage.js" asp-append-version="true"></script>
+</body>
+</html>

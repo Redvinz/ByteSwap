@@ -1,0 +1,148 @@
+﻿@{
+}
+
+@{
+    //Home - Index
+    ViewData["Title"] = "Add Product";
+}
+
+@model ByteSwapFinalProject.Models.Products
+
+
+<form method="post" enctype="multipart/form-data" asp-action="AddProduct" asp-controller="Home" class="form-inline">
+    <div class="form-row">
+
+        <div class="form-group">
+            <label asp-for="Title">Title</label>
+            <input type="text" class="form-control form-control-lg" asp-for="Title" placeholder="Input the Title" required>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price">Price</label>
+            <input type="number" class="form-control" min="1" max="100000" asp-for="Price" placeholder="Input the Price" required>
+        </div>
+        <div class="form-group">
+            <label asp-for="Brand">Brand</label>
+            <input type="text" class="form-control" asp-for="Brand" placeholder="Input the Brand (Optional)" >
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label asp-for="CategoriesId">Category</label>
+                <select class="custom-select form-control " asp-for="CategoriesId" required>
+                    <option value="" disabled selected>Select a Category</option>
+                    <option value="1">Keyboards</option>
+                    <option value="2">Mice</option>
+                    <option value="3">Monitors</option>
+                    <option value="4">Printers</option>
+                    <option value="5">Scanners</option>
+                    <option value="6">Webcams</option>
+                    <option value="7">Headsets</option>
+                    <option value="8">Speakers</option>
+                    <option value="9">Microphones</option>
+                    <option value="10">External Hard Drives</option>
+                    <option value="11">Internal Hard Drives</option>
+                    <option value="12">Solid State Drives (SSD)</option>
+                    <option value="13">Graphics Cards</option>
+                    <option value="14">Motherboards</option>
+                    <option value="15">RAM (Memory)</option>
+                    <option value="16">CPUs (Processors)</option>
+                    <option value="17">Power Supplies</option>
+                    <option value="18">Computer Cases</option>
+                    <option value="19">Cooling Systems</option>
+                    <option value="20">Networking Devices</option>
+                    <option value="21">Routers</option>
+                    <option value="22">Switches</option>
+                    <option value="23">Wireless Adapters</option>
+                    <option value="24">USB Hubs</option>
+                    <option value="25">Cables and Connectors</option>
+                    <option value="26">Memory Cards</option>
+                    <option value="27">External Optical Drives</option>
+                    <option value="28">Internal Optical Drives</option>
+                    <option value="29">Backup Batteries</option>
+                    <option value="30">Docking Stations</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label asp-for="ConditionsId">Condition</label >
+                <select class="custom-select form-control" asp-for="ConditionsId" required>
+                    <option value=""  disabled selected>Select a Condition</option>
+                    <option value="1">Brand New</option>
+                    <option value="2">Like New</option>
+                    <option value="3">Lightly Used</option>
+                    <option value="4">Well Used</option>
+                    <option value="5">Heavily Used</option>
+                    <option value="5">For Salvage</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Method">Method</label>
+            <input type="text" class="form-control" asp-for="Method" placeholder="Input the Method of Transaction" required>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Description</label>
+            <textarea type="text" class="form-control" rows="5" asp-for="Description " placeholder="Write a Description" required></textarea>
+        </div>
+        <br />
+        <div class="form-group">
+            <label asp-for="ProductImages">Upload Images</label>
+            <!-- Use ProductImages to match the Products class property -->
+            <input type="file" class="form-control-file" id="ProductImages" name="ProductImages" multiple accept="image/jpeg, image/png" onchange="validateFileUpload(this)" required>
+            <small class="form-text text-muted">Select one to four images (Max file size: 5MB each)</small>
+        </div>
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Add Product</button>
+</form>
+
+<script>
+    function submitForm() {
+        var formData = new FormData(document.querySelector('form')); // Get form data
+
+        // Perform AJAX to send form data to server
+        fetch('/Home/AddProduct', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                // Handle response as needed
+                console.log(response);
+            })
+            .catch(error => {
+                // Handle error
+                console.error(error);
+            });
+    }
+
+
+    function validateFileUpload(input) {
+        // Get the uploaded files
+        var files = input.files;
+
+        // Max allowed images
+        var maxFiles = 4;
+
+        // Allowed file types
+        var allowedTypes = ["image/jpeg", "image/png"];
+
+        // Validate the number of files
+        if (files.length > maxFiles) {
+            alert("Please select a maximum of " + maxFiles + " files.");
+            input.value = ''; // Clear the file input
+            return false;
+        }
+
+        // Validate file types
+        for (var i = 0; i < files.length; i++) {
+            if (!allowedTypes.includes(files[i].type)) {
+                alert("Please select only JPG or PNG files.");
+                input.value = ''; // Clear the file input
+                return false;
+            }
+        }
+
+        return true;
+    }
+</script>

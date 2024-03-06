@@ -1,0 +1,7 @@
+C:\Users\Laurence\source\repos\ByteSwapFinalProject\ByteSwapFinalProject\obj\Debug\net6.0\ByteSwapFinalProject.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Laurence\source\repos\ByteSwapFinalProject\ByteSwapFinalProject\obj\Debug\net6.0\ByteSwapFinalProject.AssemblyInfoInputs.cache
+C:\Users\Laurence\source\repos\ByteSwapFinalProject\ByteSwapFinalProject\obj\Debug\net6.0\ByteSwapFinalProject.AssemblyInfo.cs
+C:\Users\Laurence\source\repos\ByteSwapFinalProject\ByteSwapFinalProject\obj\Debug\net6.0\ByteSwapFinalProject.csproj.CoreCompileInputs.cache
+C:\Users\Laurence\source\repos\ByteSwapFinalProject\ByteSwapFinalProject\obj\Debug\net6.0\ByteSwapFinalProject.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Laurence\source\repos\ByteSwapFinalProject\ByteSwapFinalProject\obj\Debug\net6.0\ByteSwapFinalProject.RazorAssemblyInfo.cache
+C:\Users\Laurence\source\repos\ByteSwapFinalProject\ByteSwapFinalProject\obj\Debug\net6.0\ByteSwapFinalProject.RazorAssemblyInfo.cs

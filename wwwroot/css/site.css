@@ -1,0 +1,372 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+
+
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bgcolor-primary {
+    background-color: #57ADBF;
+}
+
+.bgcolor-secondary {
+
+}
+
+.outline-none {
+    outline: none;
+    border: none;
+}
+
+.navbar-collapse {
+    justify-content: end;
+}
+
+
+.nav-link{
+    color:#1483a9;
+}
+
+
+
+.bg-lightgray {
+    background: #ababab;
+}
+
+.bg-clr-primary {
+    background: #13647f;
+}
+
+.clr-primary {
+    color: #13647f;
+}
+
+.w-fitcontent {
+    width: fit-content;
+}
+
+.miniProfile {
+    border-radius: 15px;
+}
+
+.profilePageImgContainer {
+    width: 100%; /* Set a percentage-based width */
+    background: none;
+    border: none;
+    padding-bottom: 100%; /* Set the padding-bottom to create a square shape based on width */
+    position: relative;
+    top: 0;
+    right: 0; /* Position the container at the right side */
+}
+
+.profilePageImg {
+    width: 100%; /* Occupy 100% of the container width */
+    height: 100%; /* Occupy 100% of the container height */
+    border: 2px solid black;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*
+
+.profileTile {
+    border-radius: 15px;
+    width: 300px;
+    margin: 7px 0px 7px 0px;
+
+    list-style-type: none;
+    padding: 5px 10px 5px 12px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.profileTile-left {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: end;
+}
+
+.profileTile-left-text {
+    margin-top: -3px;
+    display: flex;
+    align-items: start;
+    font-size: 20px;
+    padding: 5px 10px 5px 0px;
+    width: fit-content;
+}
+
+.profileTile-middle {
+    width: 250px;
+    padding: 5px 0px 5px 0px;
+}
+
+.profileTile-right {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px 0px 3px 0px;
+}
+
+.profileTile-left-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.profileTile-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    height: 23px;
+    width: 23px;
+    border: none;
+    background: none;
+}
+
+.profileTile-button:hover {
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 26px;
+    width: 26px;
+}
+
+.profileTileMiddle-editor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.profileTileMiddle-editor input {
+    width: 100%;
+}
+
+.cmForms {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+.division {
+    padding: 0;
+    margin: 0;
+    width: 23px;
+    height: 10px;
+}*/
+
+
+
+
+.logo {
+    width: 12rem;
+    height: auto;
+}
+
+
+
+
+.searchbar {
+    width: 27rem;
+    height: 0.9px;
+    outline: none;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    //position: relative;
+    transition: all .1s;
+    transition-delay: .1s;
+    //background-color: #fffaf3;
+    border-color: aqua;
+  
+}
+
+    .searchbar:hover {
+        // width: 30rem;
+        height: 1.2rem;
+        box-shadow: 0 2px 10px 0px;
+    }
+
+.fa-magnifying-glass {
+    padding-left: 10px;
+    font-size: 1.4rem;
+    height: 1.6rem;
+    position: absolute;
+    display: block;
+    top: 1.5rem;
+    right: 1rem;
+    transition: all .1s;
+    transition-delay: .1s;
+    background-color: #fffaf3;
+    color: #1a89ad;
+}
+
+    .fa-magnifying-glass:hover {
+        cursor: pointer;
+    }
+
+.searchbar:hover + .fa-magnifying-glass {
+    font-size: 1.65rem;
+    top: 1.4rem;
+}
+
+.searchbar::placeholder {
+    opacity: .5;
+}
+
+.btn_sell{
+    border-radius:20px 5px 5px ;
+    background-color:#45b6f7;
+        //box-shadow: 0 2px 10px 0px;
+
+}
+
+.btn_sell:hover{
+        box-shadow: 0 0px 5px 0px ;
+
+}
+
+
+/* Custom styles for the Filter button */
+.btn-custom-filter {
+    background-color: mintcream;
+    border: none;
+    padding: 0px;
+    border-radius: 15px 15px;
+}
+
+.btn-custom-filter:hover{
+    background-color:lightcyan;
+}
+
+
+/* Custom styles for the dropdown menu */
+.custom-dropdown-menu {
+    max-height: 400px; /* Set a maximum height for the dropdown */
+    min-width:1100px;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    background-color: mintcream;
+}
+
+    /* Style each item in the dropdown menu */
+    .custom-dropdown-menu a {
+        display: block;
+        text-decoration: none;
+        color: #333;
+        border-radius: 3px 3px ;
+
+    }
+
+        /* Hover effect for dropdown items */
+        .custom-dropdown-menu a:hover {
+            background-color:silveray /* Customize the hover background color */
+        }
+
+
+
+
+.card {
+    border-radius: 16px;
+    box-shadow: 0px 0px 5px 0px;
+    transition: all .5s;
+    transition-delay: .05s;
+}
+
+    .card:hover {
+        box-shadow: 0px 5px 1px 0px;
+        transition: ease-in;
+        transition: 0.15s;
+    }
+
+.products{
+    border-radius: 25px 25px;
+}
+
+.card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-img-top {
+    flex-grow: 1; 
+    object-fit: cover; 
+}
+
+
+.btn_sell {
+    border-radius: 20px 0px 0px;
+    background-color:aliceblue;
+}
+
+
+
+
+.footer {
+    margin-top: 10rem;
+    flex-shrink: 0; /* Prevent the footer from shrinking */
+    z-index: 0;
+}
+
+
+
+
+
+
+
+.text_byte {
+    color: #198aad;
+}
+
+
+
+
+.nav2{
+    border-radius: 20px;
+    padding:10px;
+    margin-right:1rem;
+}
+
+    .nav2:hover {
+        background-color: #85cfde;
+        transition: 0.3s;
+    }
+
+
+    a {
+        color:#fffaf3
+    }
+        a:hover {
+            color: #85cfde;
+            transition: 0.15s;
+           
+        }
+
+

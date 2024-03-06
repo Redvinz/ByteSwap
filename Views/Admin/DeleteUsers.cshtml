@@ -1,0 +1,73 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Users;
+@if (Model != null)
+{
+    <h2>Are you sure you want to delete user @Model.Firstname?</h2>
+    <form asp-action="DeleteUserById" asp-controller="Admin" method="post">
+
+        <div class="form-group">
+            <label asp-for="Id" hidden>ID</label>
+            <input type="number" class="form-control" asp-for="Id" hidden>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Firstname">First Name</label>
+                <input type="text" class="form-control" asp-for="Firstname" readonly>
+            </div>
+            <div class="form-group col">
+                <label asp-for="Lastname">Last Name</label>
+                <input type="text" class="form-control" asp-for="Lastname" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Email">Email</label>
+                <input type="text" class="form-control" asp-for="Email" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Username">Username</label>
+                <input type="text" class="form-control" asp-for="Username" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="ContactNumber">Contact Number</label>
+                <input type="text" class="form-control" asp-for="ContactNumber" readonly>
+            </div>
+            <div class="form-group col">
+                <label asp-for="Type">Type (Enter 0 if admin, otherwise 1)</label>
+                <input type="text" class="form-control" asp-for="Type" readonly>
+            </div>
+            <div class="form-group col">
+                <label asp-for="ProfilePicFN">Profile File Name</label>
+                <input type="text" class="form-control" asp-for="ProfilePicFN" readonly>
+            </div>
+        </div>
+        <br />
+        <center><button type="submit" class="btn btn-danger">Delete User</button></center>
+
+    </form>
+}
+else
+{
+    <h2>User not found</h2>
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<a class="btn btn-dark" type="button" asp-controller="Admin" asp-action="Index">Go Back</a>

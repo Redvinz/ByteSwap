@@ -1,0 +1,589 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ByteSwapFinalProject.bundle.scp.css",
+      "PackagePath": "staticwebassets\\ByteSwapFinalProject.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Pictures\\1.png",
+      "PackagePath": "staticwebassets\\Pictures\\1.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Pictures\\HyperX Cloud II.jpg",
+      "PackagePath": "staticwebassets\\Pictures\\HyperX Cloud II.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Pictures\\Logitech G335.jpg",
+      "PackagePath": "staticwebassets\\Pictures\\Logitech G335.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Pictures\\pfp\\mfim1yu5h0nz.jpg",
+      "PackagePath": "staticwebassets\\Pictures\\pfp\\mfim1yu5h0nz.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Pictures\\random pic.png",
+      "PackagePath": "staticwebassets\\Pictures\\random pic.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\0af46564-4d12-480c-8c5d-fef182e33181_SDD1 Grp2 - 3ITG-Swimlane (Manage Orders Customer).drawio.png",
+      "PackagePath": "staticwebassets\\Products\\0af46564-4d12-480c-8c5d-fef182e33181_SDD1 Grp2 - 3ITG-Swimlane (Manage Orders Customer).drawio.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\1f55cfc0-2c32-4692-883d-57b61d838f1c_SDD1 Grp2 - 3ITG-Swimlane Diagram (Register).drawio.png",
+      "PackagePath": "staticwebassets\\Products\\1f55cfc0-2c32-4692-883d-57b61d838f1c_SDD1 Grp2 - 3ITG-Swimlane Diagram (Register).drawio.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\2e65eb0a-daf9-42e5-a2fd-db6846a6f686_Demo2.png",
+      "PackagePath": "staticwebassets\\Products\\2e65eb0a-daf9-42e5-a2fd-db6846a6f686_Demo2.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\2f2aa017-fca1-41cb-9d76-f6aaa22e6fb2_defaultpfp.jpg",
+      "PackagePath": "staticwebassets\\Products\\2f2aa017-fca1-41cb-9d76-f6aaa22e6fb2_defaultpfp.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\45949db3-f9cd-48c5-95fb-42b67b53ed94_defaultpfp.jpg",
+      "PackagePath": "staticwebassets\\Products\\45949db3-f9cd-48c5-95fb-42b67b53ed94_defaultpfp.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\4bb927ad-9616-4800-b95d-998f4c03eccf_defaultpfp.jpg",
+      "PackagePath": "staticwebassets\\Products\\4bb927ad-9616-4800-b95d-998f4c03eccf_defaultpfp.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\55fd3694-642b-4c2e-bf1e-05fc6cb5b7ae_defaultpfp.jpg",
+      "PackagePath": "staticwebassets\\Products\\55fd3694-642b-4c2e-bf1e-05fc6cb5b7ae_defaultpfp.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\5d277f0c-a7d7-49dd-acdb-c571b2810631_desktop-wallpaper-夢-witchy-dark-iphone-black-aesthetic-lost-aesthetic.jpg",
+      "PackagePath": "staticwebassets\\Products\\5d277f0c-a7d7-49dd-acdb-c571b2810631_desktop-wallpaper-夢-witchy-dark-iphone-black-aesthetic-lost-aesthetic.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\6b078ca6-573d-4e5e-99b8-2ca92d175b2a_desktop-wallpaper-夢-witchy-dark-iphone-black-aesthetic-lost-aesthetic.jpg",
+      "PackagePath": "staticwebassets\\Products\\6b078ca6-573d-4e5e-99b8-2ca92d175b2a_desktop-wallpaper-夢-witchy-dark-iphone-black-aesthetic-lost-aesthetic.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\6f366367-684a-4e36-bb2e-a1a5849b5715_1_-JYPeNvOdIO52Z9TuV0Wzg.jpg",
+      "PackagePath": "staticwebassets\\Products\\6f366367-684a-4e36-bb2e-a1a5849b5715_1_-JYPeNvOdIO52Z9TuV0Wzg.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\794836d2-a25d-44eb-9b81-435ed0350f8a_1_-JYPeNvOdIO52Z9TuV0Wzg.jpg",
+      "PackagePath": "staticwebassets\\Products\\794836d2-a25d-44eb-9b81-435ed0350f8a_1_-JYPeNvOdIO52Z9TuV0Wzg.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\a3afc34b-2108-4711-b48a-65bf073f2d14_logo.jpg",
+      "PackagePath": "staticwebassets\\Products\\a3afc34b-2108-4711-b48a-65bf073f2d14_logo.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\aebbef60-5493-4dc5-b599-3f0f136fb7ac_desktop-wallpaper-late-night-drive.jpg",
+      "PackagePath": "staticwebassets\\Products\\aebbef60-5493-4dc5-b599-3f0f136fb7ac_desktop-wallpaper-late-night-drive.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\c17e73ae-b57b-495e-9b6b-1da3e6605cd2_defaultpfp.jpg",
+      "PackagePath": "staticwebassets\\Products\\c17e73ae-b57b-495e-9b6b-1da3e6605cd2_defaultpfp.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\c17f1c34-f64f-45f7-a20d-171d909f497a_Demo4.png",
+      "PackagePath": "staticwebassets\\Products\\c17f1c34-f64f-45f7-a20d-171d909f497a_Demo4.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\c43c9dc3-ac46-461a-b722-cf24e17464f8_Activity Diagram Grp2-3ITG-Login.drawio (2).png",
+      "PackagePath": "staticwebassets\\Products\\c43c9dc3-ac46-461a-b722-cf24e17464f8_Activity Diagram Grp2-3ITG-Login.drawio (2).png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\c8511a0c-d10c-40f0-8da7-06fe10ea4575_Demo1.png",
+      "PackagePath": "staticwebassets\\Products\\c8511a0c-d10c-40f0-8da7-06fe10ea4575_Demo1.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\d43cddbd-6df6-47d3-a4e8-6d22e49ced0b_SDD1 Grp2 - 3ITG-Swimlane (Manage Orders Admin).drawio.png",
+      "PackagePath": "staticwebassets\\Products\\d43cddbd-6df6-47d3-a4e8-6d22e49ced0b_SDD1 Grp2 - 3ITG-Swimlane (Manage Orders Admin).drawio.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\default-product.jpg",
+      "PackagePath": "staticwebassets\\Products\\default-product.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\fcf1fb9d-3ade-45f8-a3d0-caeb53aca7a3_defaultpfp.jpg",
+      "PackagePath": "staticwebassets\\Products\\fcf1fb9d-3ade-45f8-a3d0-caeb53aca7a3_defaultpfp.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\Products\\fdb8b1d5-46b5-42b6-9b68-65038390f9a6_desktop-wallpaper-late-night-drive.jpg",
+      "PackagePath": "staticwebassets\\Products\\fdb8b1d5-46b5-42b6-9b68-65038390f9a6_desktop-wallpaper-late-night-drive.jpg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\1_BlackTxt.png",
+      "PackagePath": "staticwebassets\\assets\\1_BlackTxt.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\2_Transparent_BlackTxt.png",
+      "PackagePath": "staticwebassets\\assets\\2_Transparent_BlackTxt.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\2_Transparent_WhiteTxt.png",
+      "PackagePath": "staticwebassets\\assets\\2_Transparent_WhiteTxt.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\1_BlackTxt.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\1_BlackTxt.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\add.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\add.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\arrow-down-sign-to-navigate.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\arrow-down-sign-to-navigate.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\battery.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\battery.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\business-man.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\business-man.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\calendar.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\calendar.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\cancel.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\cancel.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\category.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\category.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\chat.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\chat.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\check(1).png",
+      "PackagePath": "staticwebassets\\assets\\icons\\check(1).png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\check-circle-fill.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\check-circle-fill.svg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\check-list.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\check-list.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\check-mark.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\check-mark.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\check.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\check.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\delete(1).png",
+      "PackagePath": "staticwebassets\\assets\\icons\\delete(1).png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\delete.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\delete.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\desktop.ini",
+      "PackagePath": "staticwebassets\\assets\\icons\\desktop.ini"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\draw-check-mark.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\draw-check-mark.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\edit-text.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\edit-text.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\edit.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\edit.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\editing.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\editing.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\facebook.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\facebook.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\heart.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\heart.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\heart_white.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\heart_white.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\home.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\home.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\lock.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\lock.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\love.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\love.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\measure.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\measure.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\notification.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\notification.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\pencil-fill.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\pencil-fill.svg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\right-arrow.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\right-arrow.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\ruler.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\ruler.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\save-instagram.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\save-instagram.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\search(1).png",
+      "PackagePath": "staticwebassets\\assets\\icons\\search(1).png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\search.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\search.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\service.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\service.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\settings.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\settings.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\trash.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\trash.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\undo.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\undo.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\user(1).png",
+      "PackagePath": "staticwebassets\\assets\\icons\\user(1).png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\user.png",
+      "PackagePath": "staticwebassets\\assets\\icons\\user.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\icons\\x-circle-fill.svg",
+      "PackagePath": "staticwebassets\\assets\\icons\\x-circle-fill.svg"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\assets\\logo_white_text.png",
+      "PackagePath": "staticwebassets\\assets\\logo_white_text.png"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\css\\ChangePassword.css",
+      "PackagePath": "staticwebassets\\css\\ChangePassword.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\css\\Home.css",
+      "PackagePath": "staticwebassets\\css\\Home.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\css\\ProfilePage.css",
+      "PackagePath": "staticwebassets\\css\\ProfilePage.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\css\\SignupPage.css",
+      "PackagePath": "staticwebassets\\css\\SignupPage.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\css\\WelcomePage.css",
+      "PackagePath": "staticwebassets\\css\\WelcomePage.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\js\\HomePage.js",
+      "PackagePath": "staticwebassets\\js\\HomePage.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\js\\ProfilePage.js",
+      "PackagePath": "staticwebassets\\js\\ProfilePage.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\js\\Saves.js",
+      "PackagePath": "staticwebassets\\js\\Saves.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\js\\WelcomePage.js",
+      "PackagePath": "staticwebassets\\js\\WelcomePage.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\Github\\ByteSwapFinalProject\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.ByteSwapFinalProject.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.ByteSwapFinalProject.props",
+      "PackagePath": "build\\ByteSwapFinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.ByteSwapFinalProject.props",
+      "PackagePath": "buildMultiTargeting\\ByteSwapFinalProject.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.ByteSwapFinalProject.props",
+      "PackagePath": "buildTransitive\\ByteSwapFinalProject.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

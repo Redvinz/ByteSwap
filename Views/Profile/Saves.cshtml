@@ -1,0 +1,134 @@
+﻿@{
+    ViewData["Title"] = "Saves";
+    ViewData["LayoutForm"] = 1;
+    ViewData["ProfileNav.Page"] = 2;
+}
+@model IEnumerable<ByteSwapFinalProject.Models.Products>
+
+
+    <style>
+        .custom-size {
+            height: 50px;
+            resize: none;
+            overflow: hidden;
+        }
+
+    </style>
+
+
+
+<div class="ps-3 mt-3 w-auto">
+    <div class="miniProfile bg-lightgray w-fitcontent py-1 px-2">
+        <span class="fw-bold">My</span> Saves
+    </div>
+</div>
+
+
+
+<div class="container">
+    <div class="row">
+        @{
+            var i = 0;
+            @foreach (var product in Model)
+            {
+
+                <div class="mt-4 col- col-md-6 col-lg-4">
+                    <div class="card w-100 p-2">
+
+                        <div class="row g-3 mb-2">
+                            <div class="col-md-6">
+                                <div class="cards">
+                                    @if (product.ProductImages != null && product.ProductImages.Any())
+                                    {
+                                        <img class="card-img-top" style="height:170px; object-fit:cover; padding:5px;" src="~/Products/@product.ProductImages.FirstOrDefault().Filename" alt="Card image cap">
+                                    }
+                                    else
+                                    {
+                                        <!-- Display a default image if no images are associated with the product -->
+                                        <img class="card-img-top" style="height:170px; object-fit:cover; padding:5px;" src="~/Products/default-product.jpg" alt="Default Image">
+                                    }
+                                </div>
+
+
+                            </div>
+                            <div class="col-md-6">
+                                <row>
+                                    <div class="col-12">
+                                        <h6 class="card-title"><strong>
+                                            @product.Title
+
+                                            </strong>
+                                        </h6>
+
+                                        <div class="row ">
+                                            <div class="col-12">
+                                                <div class="form-control bg-light w-100" style="border: none ;" disabled>
+                                                    <div class="row">
+                                                        <div class="col-3 col-md-3 col-lg-4 d-flex justify-content-center align-items-center">
+                                                            <img src="~/assets/icons/check-list.png" class="img-fluid" style="max-height: 40px;" />
+                                                        </div>
+
+                                                        <div class="col-5 col-md-9 col-lg-8 pe-0">
+                                                            <div class="row">
+                                                                <div class="text-truncate">Status:</div>
+                                                                <div class="text-truncate"><strong><em>@product.Status</em></strong></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <p>Brand: <strong><em>@product.Brand</em></strong></p>
+                                    </div>
+                                </row>
+                            </div>
+                        </div>
+                        <div class="row g-2 ">
+                            <div class="col-10">
+                                <div class="form-control custom-size bg-light" style="border: none;" disabled>
+                                    <h4><em>₱@product.Price</em></h4>
+                                </div>
+                            </div>
+
+                            <div class="col-2">
+                                <div class="form-control custom-size bg-light " style="border: none ;" disabled>
+                                    <div class="row">
+                                        <div class="col-12 d-flex justify-content-center align-items-center">
+
+                                            <form method="post" action="/Profile/ToggleUnsaveProduct">
+                                                <input type="hidden" name="productId" value="@product.Id" />
+                                                <button type="submit" class="btn btn-link">
+                                                    <img src="~/assets/icons/love.png" height="30" alt="Unsave" />
+                                                </button>
+                                            </form>
+                                            
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                i++;
+            }
+        }
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+
+<script src="~/js/Saves.js"></script>

@@ -1,0 +1,138 @@
+﻿@{
+}
+
+
+@{
+    //Home - Index
+    ViewData["Title"] = "Edit Product";
+}
+
+@using ByteSwapFinalProject.Models
+@model ByteSwapFinalProject.Models.Products
+
+
+
+
+<form method="post" enctype="multipart/form-data" asp-action="EditProduct" asp-controller="Home" class="form-inline">
+    <div class="form-row">
+        <input type="hidden" value="@Model.Id" />
+        <div class="form-group">
+            <label asp-for="Title">Title</label>
+            <input type="text" class="form-control form-control-lg" asp-for="Title" placeholder="Input the Title" required value="@Model.Title">
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label asp-for="Status">Status</label>
+                <select class="custom-select form-control" asp-for="Status" required>
+                    @{
+                        string[] statusSelected = new string[7];
+                        int statusValue = (int)Model.Status; // Convert Status enum to int
+                        statusSelected[statusValue] = "selected";
+                    }
+                    <option statusSelected[0] value="0">Available</option>
+                    <option statusSelected[1] value="1">Sold</option>
+                    <option statusSelected[2] value="2">Reserved</option>
+                    <option cstatusSelected[3] value="3">Unavailable</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price">Price</label>
+            <input type="number" class="form-control" asp-for="Price" min="1" max="100000" placeholder="Input the Price" required value="@Model.Price">
+        </div>
+        <div class="form-group">
+            <label asp-for="Brand">Brand</label>
+            <input type="text" class="form-control" asp-for="Brand" placeholder="Input the Brand (Optional)" value="@Model.Brand">
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label asp-for="CategoriesId">Category</label>
+                <select class="custom-select form-control " asp-for="CategoriesId" required>
+                    @{
+                        string[] categorySelected = new string[32];
+                        categorySelected[Model.CategoriesId] = "selected";
+                        <option categorySelected[1] value="1">Keyboards</option>
+                        <option categorySelected[2] value="2">Mice</option>
+                        <option categorySelected[3] value="3">Monitors</option>
+                        <option categorySelected[4] value="4">Printers</option>
+                        <option categorySelected[5] value="5">Scanners</option>
+                        <option categorySelected[6] value="6">Webcams</option>
+                        <option categorySelected[7] value="7">Headsets</option>
+                        <option categorySelected[8] value="8">Speakers</option>
+                        <option categorySelected[9] value="9">Microphones</option>
+                        <option categorySelected[10] value="10">External Hard Drives</option>
+                        <option categorySelected[11] value="11">Internal Hard Drives</option>
+                        <option categorySelected[12] value="12">Solid State Drives (SSD)</option>
+                        <option categorySelected[13] value="13">Graphics Cards</option>
+                        <option categorySelected[14] value="14">Motherboards</option>
+                        <option categorySelected[15] value="15">RAM (Memory)</option>
+                        <option categorySelected[16] value="16">CPUs (Processors)</option>
+                        <option categorySelected[17] value="17">Power Supplies</option>
+                        <option categorySelected[18] value="18">Computer Cases</option>
+                        <option categorySelected[19] value="19">Cooling Systems</option>
+                        <option categorySelected[20] value="20">Networking Devices</option>
+                        <option categorySelected[21] value="21">Routers</option>
+                        <option categorySelected[22] value="22">Switches</option>
+                        <option categorySelected[23] value="23">Wireless Adapters</option>
+                        <option categorySelected[24] value="24">USB Hubs</option>
+                        <option categorySelected[25] value="25">Cables and Connectors</option>
+                        <option categorySelected[26] value="26">Memory Cards</option>
+                        <option categorySelected[27] value="27">External Optical Drives</option>
+                        <option categorySelected[28] value="28">Internal Optical Drives</option>
+                        <option categorySelected[29] value="29">Backup Batteries</option>
+                        <option categorySelected[30] value="30">Docking Stations</option>
+
+                    }
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-group">
+                <label asp-for="ConditionsId">Condition</label>
+                <select class="custom-select form-control" asp-for="ConditionsId" required>
+                    @{
+                        string[] conditionSelected = new string[7];
+                        conditionSelected[Model.ConditionsId] = "selected";
+                    }
+                    <option conditionSelected[1] value="1">Brand New</option>
+                    <option conditionSelected[2] value="2">Like New</option>
+                    <option conditionSelected[3] value="3">Lightly Used</option>
+                    <option conditionSelected[4] value="4">Well Used</option>
+                    <option conditionSelected[5] value="5">Heavily Used</option>
+                    <option conditionSelected[6] value="6">For Salvage</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Method">Method</label>
+            <input type="text" class="form-control" asp-for="Method" placeholder="Input the Method of Transaction" required value="@Model.Method">
+        </div>
+        <div class="form-group">
+            <label asp-for="Description">Description</label>
+            <textarea type="text" class="form-control" rows="5" asp-for="Description " placeholder="Write a Description" required>@Model.Description</textarea>
+        </div>
+
+
+    <br />
+    <button type="submit" class="btn btn-primary">Update Product</button>
+</form>
+
+<script>
+    function submitForm() {
+        var formData = new FormData(document.querySelector('form')); // Get form data
+
+        // Perform AJAX to send form data to server
+        fetch('/Home/EditProduct', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                // Handle response as needed
+                console.log(response);
+            })
+            .catch(error => {
+                // Handle error
+                console.error(error);
+            });
+    }
+</script>

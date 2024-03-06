@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Welcome";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ByteSwap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/WelcomePage.css" asp-append-version="true" />
+</head>
+<body>
+    <div id="content-holder">
+        <div class="container row small-window" id="login">
+            <div class="col-md-6 my-3 d-flex flex-column align-items-center justify-content-center">
+                <img src="~/assets/2_Transparent_BlackTxt.png" height="100dp" />
+                <div class="text-center">Connect, Click, Upgrade!</div>
+            </div>
+
+            <div class="col-md-6 my-3 d-flex flex-column align-items-center align-items-md-end justify-content-center">
+                <div class="med-width d-flex flex-column align-items-center justify-content-end">
+                    <a class="btn my-1 btn-lg w-100 bg-clr-primary text-white" asp-controller="Welcome" asp-action="Login">Login</a>
+                    <a class="btn my-1 btn-lg w-100 bg-clr-primary text-white" asp-controller="Welcome" asp-action="Signup">SignUp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/WelcomePage.js" asp-append-version="true"></script>
+</body>
+</html>

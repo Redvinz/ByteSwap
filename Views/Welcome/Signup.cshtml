@@ -1,0 +1,77 @@
+﻿@{
+    ViewData["Title"] = "Signup";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ByteSwap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/WelcomePage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/SignupPage.css" asp-append-version="true" />
+</head>
+<body>
+    <div id="content-holder">
+        <div class="container row small-window" id="login">
+            <div class="col-md-6 my-3 d-flex flex-column align-items-center justify-content-center">
+                <img src="~/assets/2_Transparent_BlackTxt.png" height="100dp" />
+                <div class="text-center">Connect, Click, Upgrade!</div>
+            </div>
+
+            <div class="col-md-6 my-3 d-flex flex-column align-items-center align-items-md-end justify-content-center" id="right-panel">
+                <form asp-controller="Welcome" asp-action="Signup" method="post" class="welcome-forms d-flex flex-column align-items-center justify-content-end">
+                    <div class="text-start w-100 h4">Sign Up</div>
+                    <ul class="w-100">
+                        <li class="my-3 h6">
+                            <div>First Name:</div>
+                            <input name="Firstname" class="w-100 mt-1 form-control" type="text" required/>
+                        </li>
+                        <li class="my-3 h6">
+                            <div>Last Name:</div>
+                            <input name="Lastname" class="w-100 mt-1 form-control" type="text" required />
+                        </li>
+                        <li class="my-3 h6">
+                            <div>Email:</div>
+                            <input name="Email" class="w-100 mt-1 form-control" type="text" required />
+                        </li>
+                        <li class="my-3 h6">
+                            <div>Contact Number:</div>
+                            <input name="ContactNumber" class="w-100 mt-1 form-control" type="text" required />
+                        </li>
+                        <li class="my-3 h6">
+                            <div>Username:</div>
+                            <input name="Username" class="w-100 mt-1 form-control" type="text" required />
+                        </li>
+                        
+                        <li class="my-3 h6">
+                            <div>Password:</div>
+                            <input name="Password" id="password" class="w-100 mt-1 form-control" type="password" required />
+                        </li>
+                        <li class="my-3 h6">
+                            <div>Confirm Password:</div>
+                            <input name="ConfirmPassword" id="confirmPassword" class="w-100 mt-1 form-control" type="Password" required />
+                        </li>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+
+                    </ul>
+                    <div class="d-flex w-100 mt-4 justify-content-between">
+                        <a class="btn btn-secondary" asp-controller="Welcome" asp-action="Index">Return</a>
+                        <button class="btn btn-secondary bg-clr-primary" type="submit">Confirm</button>
+                    </div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/WelcomePage.js" asp-append-version="true"></script>
+</body>
+</html>

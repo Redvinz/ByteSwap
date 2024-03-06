@@ -1,0 +1,230 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ByteSwap</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Home.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ProfilePage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ByteSwap.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+</head>
+<body>
+
+    <header class=" bgcolor-primary">
+        <nav class="container navbar navbar-expand-sm navbar-toggleable-sm navbar-light  mb-1 flex-column d-flex justify-content-between align-items-center">
+
+            <div class="container-fluid d-xs-none d-sm-flex mb-1 justify-content-end align-items-center">
+                @* <div class="text-light nav-item">Made by group 4 Espana Boys!</div> *@
+                <div class="d-flex nav-item">
+                    @{
+                        if (string.IsNullOrEmpty(ViewData["AdminNav.Page"]?.ToString()))
+                        {
+                            <a class="btn_sell btn btn-sm   text-black me-3 me-md-4" asp-controller="Home" asp-action="AddProduct">+&nbsp;Sell Item</a>
+                        }
+                    }
+                    <div class="d-flex">
+                        <img class="img rounded-circle border border-dark" src="~/Pictures/pfp/mfim1yu5h0nz.jpg" height="30" width="30" />
+                        <div class="dropdown ms-1   align-items-center">
+                            <button class="btn btn-sm btn-secondary dropdown-toggle bg-white text-black" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                User,<strong>&nbsp;&#64;@ViewData["Username"]</strong>
+                                @*Replace with fname lname / username and 'admin' when admin*@
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                @{
+                                    if (string.IsNullOrEmpty(ViewData["AdminNav.Page"]?.ToString()))
+                                    {
+                                        <a class="dropdown-item" asp-controller="Profile" asp-action="Index">Profile</a>
+                                    }
+                                }
+                                
+                                <!-- Inside the dropdown menu -->
+                                <a class="dropdown-item" asp-controller="Welcome" asp-action="Logout">Logout</a>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+    
+            <div class="container-fluid">
+                
+
+
+
+                @{
+                    
+                    if (string.IsNullOrEmpty(ViewData["LayoutForm"]?.ToString()))
+                    {
+                        <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/logo_white_text.png" alt="logo.png" class="logo" />
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="navbar-collapse collapse searchbar_align d-md-inline-flex">
+
+                            <form asp-controller="Home" asp-action="Index" method="get">
+
+                            <div class=" d-flex mx-1 mx-md-3 mx-lg-5">
+
+                                    <input type="text" name="searchString" placeholder="What are you looking for?  |  "  class="searchbar" />
+                                  
+
+
+                            </div>
+                            </form>
+
+                            <div class="dropdown mx-1 mx-md-3 mx-lg-5">
+                                <button class="btn btn-custom-filter " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <div class="nav-link filter_text">Filters <i class="fa-solid fa-filter"> </i></div>
+                                </button>
+
+                                <div class="dropdown-menu dropdown-menu-end custom-dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="container">
+                                        <div class="row row-cols-5">
+                                            <!-- Change the number of columns as needed -->
+                                            @{
+                                                var uniqueCategories = new HashSet<string>();
+                                                if (ViewData["Categories"] != null)
+                                                {
+                                                    foreach (var category in (List<string>)ViewData["Categories"])
+                                                    {
+                                                        uniqueCategories.Add(category);
+                                                    }
+                                                }
+
+                                                foreach (var category in uniqueCategories)
+                                                {
+                                                    <div class="col p-2">
+                                                        <a class="dropdown-item" href="@Url.Action("Index", "Home", new { category = category })">@category</a>
+                                                    </div>
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div>
+                                <a asp-controller="Profile" asp-action="Saves">
+                                    <i class="fa-regular fa-heart fa-3x"></i>
+                                </a>
+                            </div>
+                        </div>
+                    }
+                    else if (int.Parse(ViewData["LayoutForm"].ToString()) == 1)
+                    {
+                        <a class="navbar-brand " asp-area="" asp-controller="Home" asp-action="Index">
+                            <img src="~/assets/logo_white_text.png" alt="logo.png" class="logo" />
+                        </a>
+                        <div class="d-flex ">
+
+                            @{
+                                switch (ViewData["ProfileNav.Page"]) //Which to highlight send from controller viewdata
+                                {
+                                    case 0:
+                                        {
+                                            <a class="px-3 px-md-4 text-decoration-none text-black bg-white nav2" asp-controller="Profile" asp-action="Index">Profile</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Listings">Listings</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Saves">Saves</a>
+                                            break;
+                                        }
+                                    case 1:
+                                        {
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Index">Profile</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black bg-white nav2" asp-controller="Profile" asp-action="Listings">Listings</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Saves">Saves</a>
+                                            break;
+                                        }
+                                    case 2:
+                                        {
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Index">Profile</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Listings">Listings</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black bg-white nav2" asp-controller="Profile" asp-action="Saves">Saves</a>
+                                            break;
+                                        }
+                                    case 3:
+                                        {
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Index">Profile</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Listings">Listings</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white nav2" asp-controller="Profile" asp-action="Saves">Saves</a>
+                                            break;
+                                        }
+                                }
+                            }                            
+                        </div>
+                    }
+                    else if (int.Parse(ViewData["LayoutForm"].ToString()) == 0)
+                    {
+
+                        <a class="navbar-brand " asp-area="" asp-controller="Admin" asp-action="Index">
+                            <img src="~/assets/logo_white_text.png" alt="logo.png" class="logo" />
+                        </a>
+                        <div class="w-100 d-flex justify-content-center">
+                        @{
+                            switch (ViewData["AdminNav.Page"])
+                            {
+                                case 0:
+                                    {
+                                            <a class="px-3 px-md-4 text-decoration-none text-black bg-white" asp-controller="Admin" asp-action="Index">Manage Users</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white" asp-controller="Admin" asp-action="Products">Manage Products</a>
+                                        break;
+                                    }
+                                case 1:
+                                    {
+                                            <a class="px-3 px-md-4 text-decoration-none text-black text-white" asp-controller="Admin" asp-action="Index">Manage Users</a>
+                                            <a class="px-3 px-md-4 text-decoration-none text-black bg-white" asp-controller="Admin" asp-action="Products">Manage Products</a>
+                                        break;
+                                    }
+                            }
+                        }
+                        </div>
+                    }
+                }
+
+            </div>  
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer id="footer" class="footer"> 
+        <div class="footer-legal text-center position-relative">
+            <h1 class="text_byte fw-bold mb-4">Byte<span class="text-secondary">Swap</span></h1>
+             
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>ByteSwap</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed by the Espana Bois!
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

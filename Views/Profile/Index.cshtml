@@ -1,0 +1,332 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+    ViewData["LayoutForm"] = 1;
+    ViewData["Profile.Page"] = 0;
+    Users authenticatedUser = Model as Users;
+}
+@model ByteSwapFinalProject.Models.Users
+
+<style>
+    .column-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ul-container {
+        list-style: none;
+        padding: 0;
+    }
+</style>
+
+<div class="ps-3 mt-3 w-auto">
+    <div class="miniProfile bg-lightgray w-fitcontent py-1 px-2">
+        <span class="fw-bold">Username's</span> Profile
+    </div>
+</div>
+
+<div class="container-fluid px-11 my-4 ">
+    <div class="row ">
+        <div class="col-md-12  col-lg-6">
+            <div class="mt-4 mb-4 h5" style="display: flex; align-items:center; flex-direction: column;">
+                Public Information (Visible to the Public):
+            </div>
+            <div class="d-flex justify-content-center">
+                <div class="container-fluid row align-content-center mb-4">
+                    <div class="row">
+                        <div class="col-xl-4    col-lg-5 col-md-12 " style="position: relative;">
+                            <div class=" profilePageImgContainer ">
+                                <img class="profilePageImg" src="~/Pictures/pfp/mfim1yu5h0nz.jpg" />
+                            </div>
+
+
+
+
+
+
+
+                            <div class="d-flex justify-content-evenly w-100 mt-2">
+                                <button class="edit-pfp-check" onclick="togglePfpEdit(1)" id="pfp-edit">
+                                    <img class="h-100 w-100" src="~/assets/icons/pencil-fill.svg" />
+                                </button>
+                                <button type="button" class="edit-pfp-check" id="pfp-save">
+                                    <img class="h-100 w-100" src="~/assets/icons/check-circle-fill.svg" />
+                                </button>
+                                <button type="button" class="edit-pfp-check" id="pfp-cancel" onclick="togglePfpEdit(0)">
+                                    <img class="h-100 w-100" src="~/assets/icons/x-circle-fill.svg" />
+                                </button>
+                            </div>
+
+
+
+
+
+
+
+                    </div>
+
+                    <div class="mt-sm-3 col-xl-8 col-lg-7 col-md-12  text-start ">
+                        <div class="fst-italic">User,</div>
+                            <form method="post" id="nameForm-container" class="py-2" asp-controller="Profile" asp-action="UpdateNames">
+                            <input type="hidden" value="@authenticatedUser.Id" name="Id" />
+                            <div class="nameForm-input-container">
+                                <input type="text" class="nameForm-inputs" placeholder="First Name" value="@authenticatedUser.Firstname" name="fname"/>
+                                <input type="text" class="nameForm-inputs" placeholder="Last Name" value="@authenticatedUser.Lastname" name="lname"/>
+                            </div>
+                            <div>
+                                <button type="button" onclick="toggleNameForm(0)">Cancel</button>
+                                <button type="submit">Confirm</button>
+                            </div>
+                        </form>
+                        <button type="button" class="h3 py-2 d-flex justify-content-between" id="nameView-container" onclick="toggleNameForm(1)">
+                            <div>@authenticatedUser.Firstname @authenticatedUser.Lastname</div>
+                            <div id="nameView-button">
+                                <img height="20" width="20" src="~/assets/icons/edit-text.png" />
+                            </div>
+                        </button>
+                        <h5>&commat;@authenticatedUser.Username</h5>
+
+                    </div>
+                </div>
+
+                </div>
+            </div>
+
+
+
+            @* Contact Method Forms *@
+                <div class="column-content ">
+                    <div class=" h6">
+                        Contact Methods:
+                    </div>
+                    <div>
+                        <ul class="ul-container">
+                            @{
+                            var i = 0;
+                            @foreach (var contact in Model.UserContacts)
+                            {
+                                <li class="cm-tile bg-light mb-3">
+                                    <form method="post" asp-controller="Profile" class="tile-form h-100 w-100">
+                                    <input name="cmId" hidden value="@contact.Id">
+                                        <div class="cm-tile-left">
+                                            @* ViewForm *@
+                                            <div class="cm-tile-left-bullet gv-@i">&#8226;</div>
+
+                                            @* EditForm*@
+                                            <div class="ms-4 element-editForm ge-@i" style="display: none;">Title:</div>
+                                            <div class="ms-4 element-editForm ge-@i" style="display: none;">Detail:</div>
+                                        </div>
+                                        <div class="cm-tile-middle">
+                                            @* ViewForm *@
+                                            <div class="ms-4 cm-tile-middle-content-view gv-@i">@contact.Title</div>
+
+                                            <div class="ms-4 cm-tile-middle-content-view gv-@i">@contact.Description</div>
+
+                                            @* EditForm *@
+                                        <input class="cm-tile-input-title ge-@i" style="display: none;" type="text" value="@contact.Title" name="cmTitle"/> @* Cannot use asp-for="" here. only users model is used. need alternatives *@
+                                            <textarea class="cm-tile-input-detail ge-@i" style="display: none;" name="cmDescription">@contact.Description</textarea>
+                                        </div>
+                                        <div class="cm-tile-right">
+                                            <div class="cm-tile-right-container">
+                                            @* ViewForm - Pencil *@
+                                            <button type="button" class="cm-tile-right-buttons gv-@i" onclick="showEditForm(@i)">
+                                                <img class="cm-tile-right-nestedimg" src="~/assets/icons/edit-text.png" />
+                                            </button>
+
+                                            @* EditForm - Confirm *@
+                                            <button type="submit" class="cm-tile-right-buttons ge-@i" style="display: none;" asp-action="UpdateContactMethod">
+                                                <img class="cm-tile-right-nestedimg" src="~/assets/icons/check-mark.png" />
+                                            </button>
+                                        </div>
+                                        <div class="cm-tile-right-container">
+                                            @* ViewForm - Delete *@
+                                            <button class="cm-tile-right-buttons gv-@i" type="submit" asp-action="DeleteContactMethod">
+                                                <img class="cm-tile-right-nestedimg" src="~/assets/icons/delete.png" />
+                                            </button>
+
+                                            @* EditForm - Cancel *@
+                                            <button type="button" class="cm-tile-right-buttons ge-@i" style="display: none;" onclick="showViewForm(@i)">
+                                                <img class="cm-tile-right-nestedimg" src="~/assets/icons/cancel.png" />
+                                            </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </li>
+                                i++;
+                            } 
+                            }
+
+                            @*New contact method button*@
+                            <li class="cm-tile bg-light">
+                                <div class="tile-form h-100 w-100" id="ncm-img-container">
+                                    <button type="button" id="ncm-img-button" onclick="showNCMForm(1)">
+                                        <img src="/assets/icons/add.png" id="ncm-img" />
+                                    </button>
+                                </div>
+                            <form asp-controller="Profile" asp-action="AddContact" method="post" class="tile-form h-100 w-100" id="ncm-form-container" style="display: none;" name="AddContacts">
+
+                                    <div class="cm-tile-left">
+                                        <div class="element-editForm">Title:</div>
+                                        <div class="element-editForm">Detail:</div>
+                                    </div>
+                                    <div class="cm-tile-middle">
+                                        <input class="cm-tile-input-title" type="text" required name="ncmTitle" placeholder="Title" />
+                                        <textarea class="cm-tile-input-detail" required placeholder="Description" name="ncmDescription"></textarea>
+                                    </div>
+                                    <div class="cm-tile-right">
+                                        <div class="cm-tile-right-container">
+                                            <button type="submit" class="cm-tile-right-buttons">
+                                                <img class="cm-tile-right-nestedimg" src="~/assets/icons/check-mark.png" />
+                                            </button>
+                                        </div>
+                                        <div class="cm-tile-right-container">
+                                            <button type="button" class="cm-tile-right-buttons" onclick="showNCMForm(0)">
+                                                <img class="cm-tile-right-nestedimg" src="~/assets/icons/cancel.png" />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                       
+                        </ul>
+                    </div>
+                </div>
+        </div>
+
+        <div class="col-md-12 col-lg-6">
+            <div class="column-content">
+                <div class="mt-4 h5 mb-4">
+                    Private Information (Invisible to the Public):
+                </div>
+                <div>
+                    <ul class="ul-container">
+                        
+
+                        @* Contact Number Form *@
+                        <li class="cm-tile bg-light mb-3">
+                            <form class="tile-form h-100 w-100" asp-controller="Profile" asp-action="UpdateContactNumber" method="post" >
+                                <div class="cm-tile-left">
+                                    @* ViewForm *@
+                                    <div class="cm-tile-left-bullet piV-1">&#8226;</div>
+
+                                    @* EditForm*@
+                                    <div class="element-editForm piF-1" style="display: none;">Title:</div>
+                                    <div class="element-editForm piF-1" style="display: none;">+63</div>
+                                </div>
+                                <div class="cm-tile-middle">
+                                    @* ViewForm *@
+                                    <div class="ms-4 cm-tile-middle-content-view piV-1">Mobile Number</div>
+
+                                    <div class="ms-4 cm-tile-middle-content-view piV-1">@authenticatedUser.ContactNumber</div>
+
+                                    @* EditForm *@
+                                    <div class="cm-tile-input-title piF-1" style="display: none;">Mobile Number</div>
+                                    <input type="number" class="cm-tile-input-detail piF-1" style="display: none;" asp-for="ContactNumber" min="0000000000" max="9999999999" value="@authenticatedUser.ContactNumber" />
+                                </div>
+                                <div class="cm-tile-right">
+                                    <div class="cm-tile-right-container">
+                                        @* ViewForm *@
+                                        <button type="button" class="cm-tile-right-buttons piV-1" onclick="showPiEditForm(1)">
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/edit-text.png" />
+                                        </button>
+
+                                        @* EditForm *@
+                                        <button type="submit" class="cm-tile-right-buttons piF-1" style="display: none;">
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/check-mark.png" />
+                                        </button>
+                                    </div>
+                                    <div class="cm-tile-right-container">
+                                        @* ViewForm *@
+                                        <button class="cm-tile-right-buttons piV-1" disabled>
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/delete.png" />
+                                        </button>
+
+                                        @* EditForm *@
+                                        <button type="button" class="cm-tile-right-buttons piF-1" style="display: none;" onclick="showPiViewForm(1)">
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/cancel.png" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+
+
+                        @* EMAIL FORM *@
+                        <li class="cm-tile bg-light mb-3">
+                            <form class="tile-form h-100 w-100" asp-controller="Profile" asp-action="UpdateEmail">
+                                <div class="cm-tile-left">
+                                    @* ViewForm *@
+                                    <div class="cm-tile-left-bullet piV-2">&#8226;</div>
+
+                                    @* EditForm*@
+                                    <div class="element-editForm piF-2" style="display: none;">Title:</div>
+                                    <div class="element-editForm piF-2" style="display: none;">Detail:</div>
+                                </div>
+                                <div class="cm-tile-middle">
+                                    @* ViewForm *@
+                                    <div class="ms-4 cm-tile-middle-content-view piV-2">E-mail</div>
+
+                                    <div class="ms-4 cm-tile-middle-content-view piV-2">@authenticatedUser.Email</div>
+
+                                    @* EditForm *@
+                                    <div class="cm-tile-input-title piF-2" style="display: none;">E-mail</div>
+                                    <textarea class="cm-tile-input-detail piF-2" style="display: none;" asp-for="Email">@authenticatedUser.Email</textarea>
+                                </div>
+                                <div class="cm-tile-right">
+                                    <div class="cm-tile-right-container">
+                                        @* ViewForm *@
+                                        <button type="button" class="cm-tile-right-buttons piV-2" onclick="showPiEditForm(2)">
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/edit-text.png" />
+                                        </button>
+
+                                        @* EditForm *@
+                                        <button type="submit" class="cm-tile-right-buttons piF-2" style="display: none;">
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/check-mark.png" />
+                                        </button>
+                                    </div>
+                                    <div class="cm-tile-right-container">
+                                        @* ViewForm *@
+                                        <button class="cm-tile-right-buttons piV-2" disabled>
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/delete.png" />
+                                        </button>
+
+                                        @* EditForm *@
+                                        <button type="button" class="cm-tile-right-buttons piF-2" style="display: none;" onclick="showPiViewForm(2)">
+                                            <img class="cm-tile-right-nestedimg" src="~/assets/icons/cancel.png" />
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+
+
+                        <li class="cm-tile bg-light mb-3">
+                            <form class="tile-form h-100 w-100">
+                                <div class="cm-tile-left">
+                                    @* ViewForm *@
+                                    <div class="cm-tile-left-bullet piV-3">&#8226;</div>
+                                </div>
+                                <div class="cm-tile-middle">
+                                    @* ViewForm *@
+                                    <div class="ms-4 cm-tile-middle-content-view piV-3">Password</div>
+                                    <div class="ms-4 cm-tile-middle-content-view piV-3">
+                                        <a href="@Url.Action("ChangePassword", "Profile")" style="color: black;">Change Password</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="~/js/ProfilePage.js"></script>
+
+</div>

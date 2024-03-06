@@ -1,0 +1,92 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Products;
+@if (Model != null)
+{
+    <h2>Are you sure you want to delete @Model.Title?</h2>
+    <form asp-action="DeleteProductConfirmed" asp-controller="Admin" method="post">
+
+        <div class="form-group">
+            <label asp-for="Id" hidden>ID</label>
+            <input type="number" class="form-control" asp-for="Id" hidden>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="CategoriesId">Categories Id</label>
+                <input type="text" class="form-control" asp-for="CategoriesId" readonly>
+            </div>
+            <div class="form-group col">
+                <label asp-for="UsersId">Users Id</label>
+                <input type="text" class="form-control" asp-for="UsersId" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Status">Status</label>
+                <input type="text" class="form-control" asp-for="Status" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Title">Title</label>
+                <input type="text" class="form-control" asp-for="Title" readonly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Price">Price</label>
+                <input type="text" class="form-control" asp-for="Price" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Brand">Brand</label>
+                <input type="text" class="form-control" asp-for="Brand" readonly>
+            </div>
+            <div class="form-group col">
+                <label asp-for="ConditionsId">Conditions Id</label>
+                <input type="text" class="form-control" asp-for="ConditionsId" readonly>
+            </div>
+            <div class="form-group col">
+                <label asp-for="Method">Method</label>
+                <input type="text" class="form-control" asp-for="Method" readonly>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="DatePosted">Date Posted</label>
+                <input type="text" class="form-control" asp-for="DatePosted" readonly>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col">
+                <label asp-for="Description">Description</label>
+                <input type="text" class="form-control" asp-for="Description" readonly>
+            </div>
+        </div>
+        <br />
+        <center><button type="submit" class="btn btn-danger">Delete Product</button></center>
+
+    </form>
+}
+else
+{
+    <h2>Product not found</h2>
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<a class="btn btn-dark" type="button" asp-controller="Admin" asp-action="Products">Go Back</a>

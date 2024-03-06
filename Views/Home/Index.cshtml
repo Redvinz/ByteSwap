@@ -1,0 +1,116 @@
+﻿
+@model List<Products>
+@using ByteSwapFinalProject.Services
+
+@{
+    //Home - Index
+    ViewData["Title"] = "Home";
+}
+
+@{
+    var homeDataService = ViewData["HomeDataService"] as IHomeDataService;
+}
+
+
+<div class="ps-3 mt-3 w-auto">
+    <div class="miniProfile bg-lightgray w-fitcontent py-1 px-2">
+        <span class="fw-bold">Recommended</span> Listings
+    </div>
+</div>
+
+
+<div id="notification" class="notification ps-3"></div>
+
+
+<div class="container">
+    <div class="row">
+        @* @{
+            for (int i=0; i<10; i++)
+            {
+                <div class="mt-4 px-2 col-6 col-md-4 col-lg-3">
+                    <a href="#" class="w-100 h-100 text-decoration-none text-black">
+                        <div class="card w-100">
+                            <img src="~/Pictures/1.png" class="card-img-top" alt="test">
+                            <div class="card-body p-2">
+                                <h6 class="card-title mb-1">Product Name-@i</h6>
+                                <div class="d-flex justify-content-between">
+                                    <div class="">
+                                        <div class="card-text fst-italic">Php 420-@i</div>
+                                        <div class="fst-italic text-black-50">Brand New</div>
+                                    </div>
+                                    <input type="checkbox" name="cb-@i" hidden class="product-save-btn" id="cb-@i" onchange="toggleSave(@i)"/>
+                                    <label class="d-flex align-items-end cb-label" for="cb-@i">
+                                        <img src="~/assets/icons/heart.png" height="30" id="img-@i" />
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        } *@
+
+        @{
+            foreach (var card in Model)
+            {
+                <div class="mt-5 px-2 col-6 col-md-4 col-lg-3">
+                    <a asp-controller="Home" asp-action="ProductDetails" asp-route-id="@card.Id" class="w-100 h-100 text-decoration-none text-black">
+                        <div class="card w-100">
+                            @if (card.ProductImages != null && card.ProductImages.Any())
+                            {
+                                <img class="card-img-top pt-2 ps-2 pe-2 " style="height:260px; object-fit:cover; " src="~/Products/@card.ProductImages.FirstOrDefault().Filename" alt="Card image cap">
+                            }
+                            else
+                            {
+                                <!-- Display a default image if no images are associated with the product -->
+                                <img class="card-img-top pt-2 ps-2 pe-2" style="height:260px; object-fit:cover; " src="~/Products/default-product.jpg" alt="Default Image">
+                            }
+                            <div class="card-body p-2">
+                                <h6 class="card-title mb-1">@card.Title</h6>
+                                <div class="d-flex justify-content-between">
+                                    <div class="">
+                                        <div class="card-text fst-italic">₱ @card.Price</div>
+                                        <div class="fst-italic text-black-50">@card.Conditions.Name</div>
+                                    </div>
+                                    <form method="post" action="/Home/ToggleSaveProduct">
+                                        <input type="hidden" name="productId" value="@card.Id" />
+                                        <button type="submit" class="btn btn-link">
+                                            @if (homeDataService.IsProductSavedForCurrentUser(card.Id, ViewBag.AuthenticatedUserId))
+                                            {
+                                                <img src="~/assets/icons/love.png" height="30" alt="Saved" />
+                                            }
+                                            else
+                                            {
+                                                <img src="~/assets/icons/heart.png" height="30" alt="Not Saved" />
+                                            }
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+
+
+
+            
+        }
+    </div>
+</div>
+
+
+
+<script>
+    // Get the notification message from TempData and display it
+    var notification = document.getElementById('notification');
+    if (notification !== null) {
+        var message = '@TempData["NotificationMessage"]';
+        if (message !== '') {
+            notification.innerHTML = message;
+            setTimeout(function () {
+                notification.innerHTML = '';
+            }, 5000); // Remove the notification after 5 seconds (adjust as needed)
+        }
+    }
+</script>

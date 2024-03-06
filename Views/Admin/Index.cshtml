@@ -1,0 +1,35 @@
+﻿@model List<Users>
+@{
+    ViewData["Title"] = "Users";
+}
+
+
+<div class="mt-4">
+    <table>
+        <tr>
+            <th width="200px">First Name</th>
+            <th width="200px">Last Name</th>
+            <th width="200px">Email</th>
+            <th width="200px">Username</th>
+            <th width="200px">Contact Number</th>
+            <th width="200px">Type</th>
+            <th width="200px">Profile File Name</th>
+            <th width="200px">Delete</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Firstname</td>
+                <td>@item.Lastname</td>
+                <td>@item.Email</td>
+                <td>@item.Username</td>
+                <td>@item.ContactNumber</td>
+                <td>@item.Type</td>
+                <td>@item.ProfilePicFN</td>
+                <td><a class="btn btn-danger" asp-controller="Admin" asp-action="DeleteUsers" asp-route-id="@item.Id">Delete</a></td>
+            </tr>
+        }
+    </table>
+</div>
+<br />

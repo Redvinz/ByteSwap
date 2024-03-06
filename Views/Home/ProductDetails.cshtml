@@ -1,0 +1,320 @@
+﻿@{
+    ViewData["Title"] = "Product";
+}
+
+@model ByteSwapFinalProject.Models.Products
+
+@using ByteSwapFinalProject.Services
+
+@{
+    //Home - Index
+    ViewData["Title"] = "Product Details";
+}
+@{
+    var homeDataService = ViewData["HomeDataService"] as IHomeDataService;
+}
+
+<style>
+    /* CSS for the zoomed-in image */
+    .zoomed-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 9999;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: opacity 0.3s ease-in-out;
+    }
+
+        .zoomed-image img {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+            .zoomed-image img:hover {
+                transform: scale(1.1);
+            }
+</style>
+
+<div class="container mt-5">
+    <div class="row g-5 text-center">
+        <div class="col-12 col-md-4 order-md-1 order-1">
+            <div class="row">
+                <div class="card">
+                    @if (Model.ProductImages != null && Model.ProductImages.Any())
+                    {
+                        <img class="card-img-top mt-3" src="~/Products/@Model.ProductImages.FirstOrDefault().Filename" alt="Card image cap" onclick="zoomImage(this)">
+                    }
+                    else
+                    {
+                        <!-- Display a default image if no images are associated with the product -->
+                        <img class="card-img-top mt-3" src="~/Products/default-product.jpg" alt="Default Image">
+                    }
+
+                    @if (Model.ProductImages != null && Model.ProductImages.Count() > 1)
+                    {
+                        var productImagesList = Model.ProductImages.ToList(); // Convert ICollection to List
+
+                        <div class="row mb-2 g-2" style="max-height: 320px;">
+                            @for (var index = 1; index < productImagesList.Count && index < 4; index++)
+                            {
+                                <div class="col">
+                                    <img class="card-img-top mt-3" src="~/Products/@productImagesList[index].Filename" alt="Product Image @(index + 1)" onclick="zoomImage(this)">
+                                </div>
+                            }
+                        </div>
+
+                        @if (productImagesList.Count > 4)
+                        {
+                            var remainingImages = productImagesList.Skip(4).Take(3); // Skip the first four and take the next three
+
+                            <div class="row mb-2 g-2" style="max-height: 320px;">
+                                @foreach (var image in remainingImages)
+                                {
+                                    <div class="col">
+                                        <img class="card-img-top mt-3" src="~/Products/@image.Filename" alt="Product Image" onclick="zoomImage(this)">
+                                    </div>
+                                }
+                            </div>
+                        }
+                    }
+                </div>
+
+
+
+
+                <div class="row text-start">
+                    <div class="col">
+                        <div>Date Posted:</div>
+                        <div><strong>@Model.DatePosted</strong></div>
+                    </div>
+
+                    <div class="col mt-3 text-end">
+                        <div class="row ">
+                            <div class="col-10 ">
+                                Add to Saves:
+                            </div>
+                            
+                                <div class="col-2">
+                                    <form method="post" action="/Home/ToggleSaveProduct">
+                                        <input type="hidden" name="productId" value="@Model.Id" />
+                                        <button type="submit" class="btn btn-link">
+                                            @if (homeDataService.IsProductSavedForCurrentUser(Model.Id, ViewBag.AuthenticatedUserId))
+                                            {
+                                                <img src="~/assets/icons/love.png" height="30" alt="Saved" />
+                                            }
+                                            else
+                                            {
+                                                <img src="~/assets/icons/heart.png" height="30" alt="Not Saved" />
+                                            }
+                                        </button>
+                                    </form>
+                                </div>
+                            
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div class="col-12 col-md-8 order-md-2  order-2 text-start">
+            <h2><strong>@Model.Title</strong></h2>
+            <p>Brand: <strong><em>@Model.Brand</em></strong></p>
+
+            <div class="row g-2">
+                <div class="col-lg-5 col-md-12 col-sm-12">
+                    <div class="form-control custom-size bg-light" style="border: none;" disabled>
+                        <h1><em>₱@Model.Price</em></h1>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-12 col-md-6">
+                    <div class="form-control custom-size bg-light" style="border: none;" disabled>
+                        <div class="row">
+                            <div class="col-3 col-md-3 col-lg-4 d-flex justify-content-center align-items-center">
+                                <img src="~/assets/icons/check-list.png" class="img-fluid" style="max-height: 40px;" />
+                            </div>
+
+                            <div class="col-9 col-md-9 col-lg-8">
+                                <div class="row">
+                                    <div class="text-truncate">Status:</div>
+                                    <div class="text-truncate"><strong><em>@Model.Status</em></strong></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-4 col-sm-12 col-md-6">
+                    <div class="dropdown" style="cursor:pointer;">
+                        <div class="form-control custom-size bg-light " style="border: none;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="row">
+                                <div class="col-3 col-md-3 col-lg-4 d-flex justify-content-center align-items-center">
+                                    <img src="~/assets/icons/service.png" class="img-fluid" style="max-height: 50px;" />
+                                </div>
+                                <div class="col-9 col-md-9 col-lg-8">
+                                    <div class="row">
+                                        <div class="text-truncate">Condition:</div>
+                                        <div class="col-9 text-truncate">
+                                            <strong><em>@Model.Conditions.Name</em></strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            @{
+                                int d = 0;
+                                <li><span class="dropdown-item">@Model.Conditions.Detail</span></li>
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="row mt-2 mb-2 g-2">
+
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="form-control custom-size bg-light" style="border: none;" disabled>
+                        <div class="row">
+                            <div class="col-3 d-flex justify-content-center align-items-center">
+                                <img src="~/assets/icons/category.png" class="img-fluid" style="max-height: 35px;" />
+                            </div>
+
+                            <div class="col-9">
+                                <div class="row">
+                                    @if (Model.Category != null)
+                                    {
+                                        <div class="text-truncate">Category:</div>
+                                        <div class="text-truncate"><strong><em>@Model.Category.Name</em></strong></div>
+                                    }
+                                    else
+                                    {
+                                        <div>Category information not available</div>
+                                    }
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                        <div class="form-control custom-size bg-light" style="border: none;" disabled>
+                            <div class="row">
+                                <div class="col-3 d-flex justify-content-center align-items-center">
+                                    <img src="~/assets/icons/business-man.png" class="img-fluid" style="max-height: 45px;" />
+                                </div>
+
+                                <div class="col-9">
+                                    <div class="row">
+                                        <div class="text-truncate">Seller: <em>&commat;@Model.Users.Username</em></div>
+                                        <div class="text-truncate"><strong><em>@Model.Users.Firstname @Model.Users.Lastname</em></strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="dropdown" style="cursor:pointer;">
+                        <div class="form-control custom-size bg-light " style="border: none;" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="row">
+                                <div class="col-3  d-flex justify-content-center align-items-center">
+                                    <img src="~/assets/icons/chat.png" class="img-fluid" style="max-height: 35px;" />
+                                </div>
+                                <div class="col-9  col-md-8 col-sm-8">
+                                    <div class="row">
+                                        <div class="text-truncate">See chat options with:</div>
+                                        <div class="col-9 text-truncate">
+                                            <strong><em>&commat;@Model.Users.Username</em></strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                            @{
+                                foreach (var contact in Model.Users.UserContacts)
+                                {
+                                    <div class="col-9 ">
+                                        <strong><em>@contact.Title: @contact.Description</em></strong>
+                                    </div>
+                                }
+                            }
+
+                        </ul>
+                    </div>
+                </div>
+
+
+
+                <p>Method: <em><strong>@Model.Method</strong></em></p>
+
+                <p>Description:</p>
+                <strong>
+                    <p>
+                        @Model.Description
+                    </p>
+
+                </strong>
+
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function zoomImage(image) {
+        var zoomedImg = document.createElement('div');
+        zoomedImg.className = 'zoomed-image';
+        zoomedImg.innerHTML = '<img src="' + image.src + '" alt="Zoomed Image">';
+        document.body.appendChild(zoomedImg);
+        zoomedImg.style.display = 'block';
+
+        // Close the zoomed image when clicked outside of it
+        zoomedImg.onclick = function (e) {
+            if (e.target === zoomedImg) {
+                closeZoomedImage();
+            }
+        };
+    }
+
+    function closeZoomedImage() {
+        var zoomedImg = document.querySelector('.zoomed-image');
+        if (zoomedImg) {
+            zoomedImg.style.opacity = '0';
+            setTimeout(() => {
+                zoomedImg.remove();
+            }, 300); // Remove after transition completes (300ms)
+        }
+    }
+</script>
+<script src="~/js/HomePage.js"></script>
